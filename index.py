@@ -14,7 +14,7 @@ bot = Bot(TOKEN)
 
 
 def welcome(update, context) -> None:
-    update.message.reply_text(f"Hello {update.message.from_user.first_name}, Welcome to SB Movies.\n"
+    update.message.reply_text(f"Hello {update.message.from_user.first_name}, Welcome to TCS Movies.\n"
                               f"🔥 Download Your Favourite Movies For 💯 Free And 🍿 Enjoy it.")
     update.message.reply_text("👇 Enter Movie Name 👇")
 
@@ -31,7 +31,7 @@ def find_movie(update, context):
         reply_markup = InlineKeyboardMarkup(keyboards)
         search_results.edit_text('Search Results...', reply_markup=reply_markup)
     else:
-        search_results.edit_text('Sorry 🙏, No Result Found!\nCheck If You Have Misspelled The Movie Name.')
+        search_results.edit_text('Sorry 🙏, No Result Found!\nCheck If You Have Misspelled The Movie Name.You can send movie request here- https://t.me/TCS_Movie_bot_Request_Chanel_bot')
 
 
 def movie_result(update, context) -> None:
