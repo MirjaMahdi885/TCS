@@ -14,7 +14,7 @@ bot = Bot(TOKEN)
 
 
 def welcome(update, context) -> None:
-    update.message.reply_text(f"Hello {update.message.from_user.first_name}, Welcome to SB Movies.\n"
+    update.message.reply_text(f"Hello {update.message.from_user.first_name}, Welcome to TCS Movies bot.\n"
                               f"🔥 Download Your Favourite Movies For 💯 Free And 🍿 Enjoy it.")
     update.message.reply_text("👇 Enter Movie Name 👇")
 
@@ -44,7 +44,7 @@ def movie_result(update, context) -> None:
     links = s["links"]
     for i in links:
         link += "🎬" + i + "\n" + links[i] + "\n\n"
-    caption = f"⚡ Fast Download Links :-\n\n{link}"
+    caption = f"Try not to use GDTOT links\n⚡ Fast Download Links :-\n\n{link}"
     if len(caption) > 4095:
         for x in range(0, len(caption), 4095):
             query.message.reply_text(text=caption[x:x+4095])
